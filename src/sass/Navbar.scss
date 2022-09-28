@@ -1,0 +1,141 @@
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 150px;
+  top: 0;
+  font-size: 1.2rem;
+  position: relative;
+  z-index: 1000;
+  .nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+    height: 100px;
+
+    margin: 1rem auto;
+    @media screen and (min-width: 1199px) {
+      width: 80%;
+    }
+
+    @media screen and (min-width: 1080px) {
+      width: 80%;
+    }
+
+    @media screen and (min-width: 920px) {
+      width: 70%;
+    }
+    .logo {
+      cursor: pointer;
+      text-decoration: none;
+      position: relative;
+      display: block;
+      left: 0;
+      padding-bottom: 1rem;
+      z-index: -1;
+      &:hover {
+        border-bottom: 1px solid $orange;
+      }
+
+      @media screen and (min-width: 768px) {
+        left: 2.5rem;
+      }
+
+      @media screen and (min-width: 568px) {
+        left: 2.5rem;
+      }
+    }
+    .nav-icon {
+      display: none;
+      @media screen and (max-width: 960px) {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        top: -1rem;
+        right: 0;
+        left: 0;
+        transform: translate(-100%, 60%);
+        font-size: 3rem;
+        cursor: pointer;
+
+        background-color: #000;
+        color: #fff;
+        padding: 0.2rem;
+        border-radius: 2rem;
+        &:hover {
+          color: $orange;
+          outline: 1px solid $orange;
+        }
+      }
+    }
+    .nav-menu {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      list-style: none;
+      gap: 3rem;
+      position: relative;
+      left: 0;
+      bottom: 0;
+      top: 0;
+      font-weight: 400;
+      font-size: 1.3rem;
+      z-index: 1000;
+      cursor: pointer;
+      width: 100%;
+      .nav-links {
+        text-decoration: none;
+        color: #000;
+        z-index: 1000;
+        &:hover {
+          color: $very-dark-blue;
+          font-weight: 700;
+          border-bottom: 3px solid $orange;
+        }
+      }
+      @media screen and (max-width: 960px) {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 600px;
+        left: -100%;
+        top: 6rem;
+        transition: all 0.5s ease;
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+        border-bottom-right-radius: 1rem;
+        border-top-right-radius: 1rem;
+        .nav-links {
+          color: $white;
+
+          &:hover {
+            color: $pale-orange;
+            font-weight: 700;
+            border-bottom: 3px solid $orange;
+          }
+        }
+      }
+    }
+    .nav-menu.active {
+      background: $very-dark-blue;
+      left: -14rem;
+      width: 500px;
+      opacity: 1;
+      transition: all 0.5s ease;
+      margin-bottom: 2rem;
+      height: 700px;
+      z-index: 1000;
+    }
+  }
+
+  .main-container {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: -1;
+  }
+}

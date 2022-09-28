@@ -1,0 +1,90 @@
+.card-product {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  height: 300px;
+  border-radius: 30px;
+  margin-top: 2rem;
+  
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+    height: auto;
+    padding: 1rem;
+  }
+  .products {
+    width: 30%;
+    height: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    gap: 2rem;
+    border-radius: 30px;
+    font-size: 35px;
+    color: rgba(229, 226, 226, 0.925);
+    transition: all 1s ease 0.1s;
+    opacity: 1;
+    cursor: pointer;
+   @media screen and (max-width: 768px) {
+    width:70%;
+   }
+    .sale-elements {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      span {
+        margin-top: 2rem;
+      }
+    }
+    .arrow {
+      color: #fff;
+      font-size: 50px;
+    }
+  }
+  .dress {
+    background-image: url(../../img/dress.jpg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: local;
+    background-blend-mode: soft-light;
+    height: 40%;
+    transition-property: height;
+    transition-duration: 2s;
+    background-color: hsl(0deg 0% 0% / 58%);
+    &:hover {
+      height: 80%;
+    }
+  }
+
+  .sale {
+    background-image: url(../../img/sale.jpg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: local;
+    background-blend-mode: soft-light;
+    height: 40%;
+    transition-property: height;
+    transition-duration: 2s;
+    background-color: hsl(0deg 0% 0% / 58%);
+    &:hover {
+      height: 80%;
+    }
+  }
+  .accesories {
+    background-image: url(../../img/accesories.jpg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: local;
+    background-blend-mode: soft-light;
+    height: 40%;
+    transition-property: height;
+    transition-duration: 2s;
+    background-color: hsl(0deg 0% 0% / 58%);
+    &:hover {
+      height: 80%;
+    }
+  }
+}
